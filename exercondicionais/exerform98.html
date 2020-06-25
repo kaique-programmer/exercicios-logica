@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script>
+    /*
+      Nome: Kaique Oliveira Santos
+      RA: 0781821041
+      Questinário: 10
+      Número da questão: 98
+    */
+
+    function calcularNota() {
+
+      var n1, n2, n3, n4, media
+
+      n1 = Number(parseFloat(document.getElementById('txtN1').value))
+      n2 = Number(parseFloat(document.getElementById('txtN2').value))
+      n3 = Number(parseFloat(document.getElementById('txtN3').value))
+      n4 = Number(parseFloat(document.getElementById('txtN4').value))
+
+      media = (n1 + n2 + n3 + n4) / 4
+
+      if (media >= 7)
+        alert(`Aluno aprovado com media: ${parseFloat(media.toFixed(2))}`);
+
+      if (media < 7)
+        alert(`Aluno reprovado com media: ${parseFloat(media.toFixed(2))}`);
+
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row my-3 ml-5">
+      <div class="col-4">
+        <form>
+          Nota 1: <input class="form-control" type="text" id="txtN1" placeholder="Digite um número">
+          Nota 2: <input class="form-control" type="text" id="txtN2" placeholder="Digite um número">
+          Nota 3: <input class="form-control" type="text" id="txtN3" placeholder="Digite um número">
+          Nota 4: <input class="form-control" type="text" id="txtN4" placeholder="Digite um número">
+          <button class="btn btn-warning my-1 ml-5" type="button" value="Calcular" onclick="calcularNota()">
+            Calular Nota
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

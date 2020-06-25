@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /*
+      Nome: Kaique Oliveira Santos
+      RA: 0781821041
+      Questinário: 11
+      Número da questão: 123
+    */
+    function calcular() {
+      var x, r, input, cont = 0
+
+      while (cont < 5) { // a quantidade de vezes que operação deve ser repetida
+        cont++
+        input = parseInt(document.getElementById('inputOfUser').value)
+        x = input
+        r = x * 3
+        alert(r);
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Cálculo de um número por 3, a operação se repete 5 vezes com entradas diferentes, digitados pelo usuário.</h1>
+  <form>
+    Número: <input type="text" id="inputOfUser" placeholder="Digite um número">
+    <button type="button" onclick="calcular()">Calcular</button>
+  </form>
+</body>
+
+</html>

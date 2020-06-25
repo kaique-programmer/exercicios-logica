@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /*
+      Nome: Kaique Oliveira Santos
+      RA: 0781821041
+      Questinário: 11
+      Número da questão: 125
+    */
+    function calcular() {
+      var f, x = parseInt(document.getElementById('inputOfUser').value)
+      if (x >= 0) {
+        for (f = 1; x > 1; x--) {
+          f *= x
+        }
+        alert(f);
+      } else
+        alert('O número não pode ser nagativo');
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Fatorial de um número.</h1>
+  <form>
+    Número: <input type="text" id="inputOfUser" placeholder="Digite um número">
+    <button type="button" onclick="calcular()">Calcular</button>
+  </form>
+</body>
+
+</html>

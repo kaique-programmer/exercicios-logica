@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script>
+    function calcularPedido() {
+      /*
+        Nome: Kaique Oliveira Santos
+        RA: 0781821041
+        Questinário: 10
+        Número da questão: 95
+      */
+      var codigoLanche, qtd, valorTotal
+
+      var precoCachorroQuente = 1.20,
+        precoBauruSimples = 1.30,
+        precoBauruOvo = 1.50,
+        precoHamburguer = 1.20,
+        precoCheeseburguer = 1.30,
+        precoRefrigerante = 1.00
+
+      codigoLanche = Number(parseInt(document.getElementById("codigoLanche").value))
+      qtd = Number(parseInt(document.getElementById("qtdLanche").value))
+
+      switch (codigoLanche) {
+        case 100:
+          valorTotal = qtd * precoCachorroQuente
+          alert(`Valor total do pedido: R$ ${valorTotal.toFixed(2)}`)
+          break;
+
+        case 101:
+          valorTotal = qtd * precoBauruSimples
+          alert(`Valor total do pedido: ${valorTotal.toFixed(2)}`)
+          break;
+
+        case 102:
+          valorTotal = qtd * precoBauruOvo
+          alert(`Valor total do pedido: ${valorTotal.toFixed(2)}`)
+          break;
+
+        case 103:
+          valorTotal = qtd * precoHamburguer
+          alert(`Valor total do pedido: ${valorTotal.toFixed(2)}`)
+          break;
+
+        case 104:
+          valorTotal = qtd * precoCheeseburguer
+          alert(`Valor total do pedido: ${valorTotal.toFixed(2)}`)
+          break;
+
+        case 105:
+          valorTotal = qtd * precoRefrigerante
+          alert(`Valor total do pedido: ${valorTotal.toFixed(2)}`)
+          break;
+
+        default:
+          alert('código inexistente');
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Especificação</th>
+        <th>Código</th>
+        <th>Preço</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Bauru simples</td>
+        <td>100</td>
+        <td>R$ 1,20</td>
+      </tr>
+      <tr>
+        <td>Cachorro Quente</td>
+        <td>101</td>
+        <td>R$ 1,30</td>txtN1
+      </tr>
+      <tr>
+        <td>Bauru com ovo</td>
+        <td>102</td>
+        <td>R$ 1,50</td>
+      </tr>
+      <tr>
+        <td>Hambúrguer</td>
+        <td>103</td>
+        <td>R$ 1,20</td>
+      </tr>
+      <tr>
+        <td>Cheeseburguer</td>
+        <td>104</td>
+        <td>R$ 1,30</td>
+      </tr>
+      <tr>
+        <td>Refrigerante</td>
+        <td>105</td>
+        <td>R$ 1,00</td>
+      </tr>
+      </tr>
+    </tbody>
+  </table><br>
+
+  <div class="container">
+    <div class="row my-3 ml-5">
+      <div class="col-6">
+        <form>
+          Código do lanche: <input class="form-control" type="text" id="codigoLanche"
+            placeholder="Digite o código do lanche">
+          Quantidade: <input class="form-control" type="text" id="qtdLanche" placeholder="Digite a quantidade">
+
+          <button class="btn btn-warning my-1 ml-5" type="button" value="Calcular" onclick="calcularPedido()">
+            Calcular Pedido
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

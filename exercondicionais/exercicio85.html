@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /*
+      Nome: Kaique Oliveira Santos
+      RA: 0781821041
+      Questinário: 10
+      Número da questão: 95
+    */
+        
+    var n1, n2, n3, n4, media
+
+    n1 = Number(parseFloat(prompt('Digite 1° nota')))
+    n2 = Number(parseFloat(prompt('Digite 2° nota')))
+    n3 = Number(parseFloat(prompt('Digite 3° nota')))
+    n4 = Number(parseFloat(prompt('Digite 4° nota')))
+
+    media = (n1 + n2+ n3 + n4) / 4
+
+    if(media >= 7)
+      alert(`Aluno aprovado com media: ${parseFloat(media.toFixed(2))}`);
+
+    if(media < 7)
+      alert(`Aluno reprovado com media: ${parseFloat(media.toFixed(2))}`); 
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

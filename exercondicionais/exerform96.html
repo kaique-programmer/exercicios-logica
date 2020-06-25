@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script>
+    /*
+      Nome: Kaique Oliveira Santos
+      RA: 0781821041
+      Questinário: 10
+      Número da questão: 96
+    */
+
+    function verificarNumeroPositivoNegativo() { // verificar se o número é positivo ou negativo
+      var valor
+
+      valor = Number(parseInt(document.getElementById('txtN1').value))
+
+      if (valor < 0)
+        alert(`Valor: ${Math.abs(valor)}`);
+
+      if (valor >= 1)
+        alert(`Valor: ${Math.abs(valor)}`);
+        
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row my-3 ml-5">
+      <div class="col-4">
+        <form>
+          N1: <input class="form-control" type="text" id="txtN1" placeholder="Digite um número">
+          <button class="btn btn-warning my-1 ml-5" type="button" value="Calcular" onclick="verificarNumeroPositivoNegativo()">
+            Verificar Número
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

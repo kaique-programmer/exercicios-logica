@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script>
+    /*
+      Nome: Kaique Oliveira Santos
+      RA: 0781821041
+      Questinário: 10
+      Número da questão: 98
+    */
+
+    function efetuarOperacao() {
+
+      var n1, n2, n3, n4
+
+      n1 = Number(parseInt(document.getElementById('txtN1').value))
+      n2 = Number(parseInt(document.getElementById('txtN2').value))
+      n3 = Number(parseInt(document.getElementById('txtN3').value))
+      n4 = Number(parseInt(document.getElementById('txtN4').value))
+
+      if (parseInt((n1 / 2)) && parseInt((n1 / 3)))
+        alert(`${n1} é divisível por 2 e por 3`);
+
+      if (parseInt((n2 / 2)) && parseInt((n2 / 3)))
+        alert(`${n2} é divisível por 2 e por 3`);
+
+      if (parseInt((n3 / 2)) && parseInt((n3 / 3)))
+        alert(`${n3} é divisível por 2 e por 3`);
+
+      if (parseInt((n4 / 2)) && parseInt((n4 / 3)))
+        alert(`${n4} é divisível por 2 e por 3`);
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row my-3 ml-5">
+      <div class="col-4">
+        <form>
+          N1: <input class="form-control" type="text" id="txtN1" placeholder="Digite um número">
+          N2: <input class="form-control" type="text" id="txtN2" placeholder="Digite um número">
+          N3: <input class="form-control" type="text" id="txtN3" placeholder="Digite um número">
+          N4: <input class="form-control" type="text" id="txtN4" placeholder="Digite um número">
+          <button class="btn btn-warning my-1 ml-5" type="button" value="Calcular" onclick="efetuarOperacao()">
+            Efetuar Operação
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

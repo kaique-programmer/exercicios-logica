@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /*
+      Nome: Kaique Oliveira Santos
+      RA: 0781821041
+      Questinário: 11
+      Número da questão: 127
+    */
+    function calcular() {
+      var soma = 0, index, input = document.getElementById('inputOfUser').value;
+      for (index = 1; index <= input; index++) {
+        if(index <= 100)
+          soma = soma + index;
+      }
+      alert("A soma dos 100 primeiros numeros inteiros é: " + soma)
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Somatório dos 100 primeiros numeros.</h1>
+  <form>
+    Número: <input type="text" id="inputOfUser" placeholder="Digite um número">
+    <button type="button" onclick="calcular()">Calcular</button>
+  </form>
+</body>
+
+</html>

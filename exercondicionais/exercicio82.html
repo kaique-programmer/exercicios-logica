@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /*
+      Nome: Kaique Oliveira Santos
+      RA: 0781821041
+      Questinário: 10
+      Número da questão: 95
+    */
+
+    var n1, n2, aux
+    
+    n1 = Number(prompt('Digite um 1° valor'))
+    n2 = Number(prompt('Digite um 2° valor'))
+    n3 = Number(prompt('Digite um 3° valor'))
+
+    if(n1 > n2){
+      aux = n1
+      n1 = n2
+      n2 = aux
+    }  
+    if(n2 > n3){
+      aux = n2
+      n2 = n3
+      n3 = aux
+    }
+    if(n1 > n2){
+      aux = n1
+      n1 = n2
+      n2 = aux
+    } 
+    alert(`Valores em ordem crescente: ${n1},${n2},${n3}`)
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

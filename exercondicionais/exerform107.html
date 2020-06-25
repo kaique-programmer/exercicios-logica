@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script>
+    /*
+      Nome: Kaique Oliveira Santos
+      RA: 0781821041
+      Questinário: 10
+      Número da questão: 94
+    */
+
+    function calcularSalario() {
+      var salario, cargo, acrescimoSalarial, novoSalario, diferencaSalarial
+
+      salario = Number(parseFloat(document.getElementById('salarioFunc'))) // salário do funcionário
+      cargo = document.getElementById('cargoFunc') // cargo do funcionário
+
+      switch (cargo) { // cada entrada representa a inicial de cada cargo
+        case "g":
+          acrescimoSalarial = (salario * 10) / 100
+          novoSalario = acrescimoSalarial + salario
+          diferencaSalarial = novoSalario - salario
+          alert('Cargo: Gerente' +
+                '\nSalário anterior: R$ ' + salario.toFixed(2) +
+                '\nSalário com Aumento de 10%: R$ ' + novoSalario.toFixed(2) + 
+                '\nDiferença: ' + diferencaSalarial)
+          break
+
+        case "e":
+          acrescimoSalarial = (salario * 20) / 100
+          novoSalario = acrescimoSalarial + salario
+          diferencaSalarial = novoSalario - salario
+          alert('Cargo: Engenheiro' +
+                '\nSalário anterior: R$ ' + salario.toFixed(2) +
+                '\nSalário com Aumento de 20%: R$ ' + novoSalario.toFixed(2) + 
+                '\nDiferença: ' + diferencaSalarial)
+          break
+
+        case "t":
+          acrescimoSalarial = (salario * 30) / 100
+          novoSalario = acrescimoSalarial + salario
+          diferencaSalarial = novoSalario - salario
+          alert('Cargo: Técnico' +
+                '\nSalário anterior: R$ ' + salario.toFixed(2) +
+                '\nSalário com Aumento de 30%: R$ ' + novoSalario.toFixed(2) + 
+                '\nDiferença: ' + diferencaSalarial)
+          break
+
+        default:
+          acrescimoSalarial = (salario * 40) / 100
+          novoSalario = acrescimoSalarial + salario
+          diferencaSalarial = novoSalario - salario
+          alert('Cargo Novo: ' + cargo +
+                '\nSalário anterior: R$ ' + salario.toFixed(2) +
+                '\nSalário com Aumento de 40%: R$ ' + novoSalario.toFixed(2) + 
+                '\nDiferença: R$ ' + diferencaSalarial.toFixed(2))
+          break;
+      }
+
+    }
+  </script>
+</head>
+
+<body>
+  <table class="table">
+    <thead>
+      <th>Código</th>
+      <th>Cargo</th>
+      <th>Percentual</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>101</td>
+        <td>Gerente</td>
+        <td>10%</td>
+      </tr>
+      <tr>
+        <td>102</td>
+        <td>Engenheiro</td>
+        <td>20%</td>
+      </tr>
+      <tr>
+        <td>103</td>
+        <td>Técnico</td>
+        <td>30%</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="text-muted">
+    A entrada dos dados representam a letra inicial de cada cargo, no momento da realização
+    do cálculo. Se o cargo não existir na tabela deverá ser digitado um novo cargo por completo. 
+  </p>
+
+  <div class="container">
+    <div class="row my-3 ml-5">
+      <div class="col-6">
+        <form>
+          Salário: <input class="form-control" type="text" id="salarioFunc" placeholder="Digite o salário do funcionário">
+          Cargo: <input class="form-control" type="text" id="cargoFunc" placeholder="Digite o cargo do funcionário">
+
+          <button class="btn btn-warning my-1 ml-5" type="button" onclick="calcularSalario()">
+            Calcular Salário
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

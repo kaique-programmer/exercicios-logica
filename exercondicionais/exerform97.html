@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script>
+    /*
+      Nome: Kaique Oliveira Santos
+      RA: 0781821041
+      Questinário: 10
+      Número da questão: 97
+    */
+
+    function verificarMaiorMenor() { 
+      var n1, n2, diferenca1, diferenca2
+
+      n1 = Number(document.getElementById('txtN1').value)
+      n2 = Number(document.getElementById('txtN2').value)
+
+      diferenca1 = n1 - n2
+      diferenca2 = n2 - n1
+
+      if (n1 > n2)
+        alert(`Maior número ${n1}, diferença de ${diferenca1} para o menor ${n2}`);
+
+      if (n2 > n1)
+        alert(`Maior número ${n2}, diferença de ${diferenca2} para o menor ${n1}`);
+
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row my-3 ml-5">
+      <div class="col-4">
+        <form>
+          N1: <input class="form-control" type="text" id="txtN1" placeholder="Digite um número">
+          N2: <input class="form-control" type="text" id="txtN2" placeholder="Digite um número">
+          <button class="btn btn-warning my-1 ml-5" type="button" value="Calcular" onclick="verificarMaiorMenor()">
+            Verificar Maior ou Menor Número
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

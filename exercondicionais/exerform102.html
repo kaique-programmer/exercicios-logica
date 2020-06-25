@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script>
+    /*
+      Nome: Kaique Oliveira Santos
+      RA: 0781821041
+      Questinário: 10
+      Número da questão: 98
+    */
+
+    function verificarMaiorNumero() {
+      var n1, n2, n3, n4, n5
+
+      n1 = Number(parseInt(document.getElementById('txtN1').value))
+      n2 = Number(parseInt(document.getElementById('txtN2').value))
+      n3 = Number(parseInt(document.getElementById('txtN3').value))
+      n4 = Number(parseInt(document.getElementById('txtN4').value))
+      n5 = Number(parseInt(document.getElementById('txtN5').value))
+
+      if ((n1 > n2) && (n1 > n3) && (n1 > n4) && (n1 > n5))
+        alert(`${n1} é o maior valor`);
+
+      if ((n2 > n1) && (n2 > n3) && (n2 > n4) && (n2 > n5))
+        alert(`${n2} é o maior valor`);
+
+      if ((n3 > n1) && (n3 > n2) && (n3 > n4) && (n3 > n5))
+        alert(`${n3} é o maior valor`);
+
+      if ((n4 > n1) && (n4 > n2) && (n4 > n3) && (n4 > n5))
+        alert(`${n4} é o maior valor`);
+
+      if ((n5 > n1) && (n5 > n2) && (n5 > n3) && (n5 > n4))
+        alert(`${n5} é o maior valor`);
+
+      // menor número
+      if ((n1 < n2) && (n1 < n3) && (n1 < n4) && (n1 < n5))
+        alert(`${n1} é o menor valor`);
+
+      if ((n2 < n1) && (n2 < n3) && (n2 < n4) && (n2 < n5))
+        alert(`${n2} é o menor valor`);
+
+      if ((n3 < n1) && (n3 < n2) && (n3 < n4) && (n3 < n5))
+        alert(`${n3} é o menor valor`);
+
+      if ((n4 < n1) && (n4 < n2) && (n4 < n3) && (n4 < n5))
+        alert(`${n4} é o menor valor`);
+
+      if ((n5 < n1) && (n5 < n2) && (n5 < n3) && (n5 < n4))
+        alert(`${n5} é o menor valor`);
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row my-3 ml-5">
+      <div class="col-4">
+        <form>
+          N1: <input class="form-control" type="text" id="txtN1" placeholder="Digite um número">
+          N2: <input class="form-control" type="text" id="txtN2" placeholder="Digite um número">
+          N3: <input class="form-control" type="text" id="txtN3" placeholder="Digite um número">
+          N4: <input class="form-control" type="text" id="txtN4" placeholder="Digite um número">
+          N5: <input class="form-control" type="text" id="txtN5" placeholder="Digite um número">
+          <button class="btn btn-warning my-1 ml-5" type="button" value="Calcular" onclick="verificarMaiorNumero()">
+            calcular Maior e Menor Número: 
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

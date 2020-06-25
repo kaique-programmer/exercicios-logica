@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+        crossorigin="anonymous">
+  <script>
+    function calcularPedido() {
+      var codigoLanche, qtd, valorTotal
+
+      var precoCachorroQuente = 1.20,
+          precoBauruSimples = 1.30,
+          precoBauruOvo = 1.50,
+          precoHamburguer = 1.20,
+          precoCheeseburguer = 1.30,
+          precoRefrigerante = 1.00
+
+      codigoLanche = Number(parseInt(prompt("Digite o código do lanche: ")))
+      qtd = Number(parseInt(prompt("Digite a quantidade desejada: ")))
+
+      switch (codigoLanche) {
+        case 100:
+          valorTotal = qtd * precoCachorroQuente
+          alert(`Valor total do pedido: R$ ${valorTotal.toFixed(2)}`)
+          break;
+
+        case 101:
+          valorTotal = qtd * precoBauruSimples
+          alert(`Valor total do pedido: ${valorTotal.toFixed(2)}`)
+          break;
+
+        case 102:
+          valorTotal = qtd * precoBauruOvo
+          alert(`Valor total do pedido: ${valorTotal.toFixed(2)}`)
+          break;
+
+        case 103:
+          valorTotal = qtd * precoHamburguer
+          alert(`Valor total do pedido: ${valorTotal.toFixed(2)}`)
+          break;
+
+        case 104:
+          valorTotal = qtd * precoCheeseburguer
+          alert(`Valor total do pedido: ${valorTotal.toFixed(2)}`)
+          break;
+
+        case 105:
+          valorTotal = qtd * precoRefrigerante
+          alert(`Valor total do pedido: ${valorTotal.toFixed(2)}`)
+          break;
+
+        default:
+          alert('código inexistente');
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Especificação</th>
+        <th>Código</th>
+        <th>Preço</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Bauru simples</td>
+        <td>100</td>
+        <td>R$ 1,20</td>
+      </tr>
+      <tr>
+        <td>Cachorro Quente</td>
+        <td>101</td>
+        <td>R$ 1,30</td>
+      </tr>
+      <tr>
+        <td>Bauru com ovo</td>
+        <td>102</td>
+        <td>R$ 1,50</td>
+      </tr>
+      <tr>
+        <td>Hambúrguer</td>
+        <td>103</td>
+        <td>R$ 1,20</td>
+      </tr>
+      <tr>
+        <td>Cheeseburguer</td>
+        <td>104</td>
+        <td>R$ 1,30</td>
+      </tr>
+      <tr>
+        <td>Refrigerante</td>
+        <td>105</td>
+        <td>R$ 1,00</td>
+      </tr>
+      </tr>
+    </tbody>
+  </table><br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <button type="button" class="btn btn-primary" onclick="calcularPedido()">
+          Clique Aqui para o cálculo do pedido
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
